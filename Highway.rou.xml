@@ -1,0 +1,28 @@
+<routes>
+	<vType id="ego" accel="0.8" decel="4.5" sigma="0.5" length="3" maxSpeed="100" vClass="passenger" minGap="0" carFollowModel="Krauss"/>
+	<vType id="car1" accel="0.7" decel="4.5" sigma="0.5" length="3" maxSpeed="100" vClass="passenger" minGap="0" carFollowModel="Krauss" lcCooperative="0"/>
+	<vType id="car2" accel="0.5" decel="3" sigma="0.5" length="3.5" maxSpeed="40" vClass="passenger" minGap="0" carFollowModel="Krauss" lcCooperative="0"/>
+	<vType id="car3" accel="0.8" decel="4.5" sigma="0.5" length="3" maxSpeed="60" vClass="passenger" minGap="0" carFollowModel="Krauss" lcCooperative="0"/>
+	<vType id="car4" accel="0.8" decel="4.5" sigma="0.5" length="4" maxSpeed="70" vClass="passenger" minGap="0" carFollowModel="Krauss" lcCooperative="0"/>
+	<vType id="bus1" accel="0.5" decel="3.5" sigma="0.5" length="10" maxSpeed="40" vClass="passenger" minGap="0" carFollowModel="Krauss" guiShape="bus" lcCooperative="0"/>
+	<vType id="car5" accel="0.6" decel="4.5" sigma="0.5" length="3" maxSpeed="100" vClass="passenger" minGap="0" carFollowModel="Krauss" lcCooperative="0"/>
+	<vType id="car6" accel="0.9" decel="5" sigma="0.5" length="3" maxSpeed="40" vClass="passenger" minGap="0" carFollowModel="Krauss" lcCooperative="0"/>
+	<vType id="car7" accel="0.4" decel="3.7" sigma="0.5" length="3.7" maxSpeed="100" vClass="passenger" minGap="0" carFollowModel="Krauss" lcCooperative="0"/>
+	<vType id="car8" accel="0.8" decel="4.5" sigma="0.5" length="4.2" maxSpeed="90" vClass="passenger" minGap="0" carFollowModel="Krauss" lcCooperative="0"/>
+	<vType id="bus2" accel="0.5" decel="3.5" sigma="0.5" length="12" maxSpeed="50" vClass="passenger" minGap="0" carFollowModel="Krauss" guiShape="bus" lcCooperative="0"/>
+
+	<route id="route0" color="1,1,0" edges="1to2"/>
+
+	<flow id="f1" color="1,1,0" begin="0" end="7200" probability="0.2" route="route0" departLane="best" type="car1"/>
+	<flow id="f2" color="1,0,1" begin="0" end="7200" probability="0.2" route="route0" departLane="best" type="car2"/>
+	<flow id="f3" color="0,1,1" begin="0" end="7200" probability="0.2" route="route0" departLane="best" type="car3"/>
+	<flow id="f4" color="0,0,1" begin="0" end="7200" probability="0.2" route="route0" departLane="best" type="car4"/>
+	<flow id="f5" color="0,1,0" begin="0" end="7200" probability="0.2" route="route0" departLane="best" type="bus1"/>
+	<flow id="f6" color="1,1,0" begin="0" end="7200" probability="0.2" route="route0" departLane="best" type="car1"/>
+	<flow id="f7" color="1,0,1" begin="0" end="7200" probability="0.2" route="route0" departLane="best" type="car2"/>
+	<flow id="f8" color="0,1,1" begin="0" end="7200" probability="0.2" route="route0" departLane="best" type="car3"/>
+	<flow id="f9" color="0,0,1" begin="0" end="7200" probability="0.2" route="route0" departLane="best" type="car4"/>
+	<flow id="f0" color="0,1,0" begin="0" end="7200" probability="0.2" route="route0" departLane="best" type="bus1"/>
+
+	<vehicle id="ego" type="car1" route="route0" depart="20" color="1,0,0" departLane="random"/> <!-- red -->
+</routes>

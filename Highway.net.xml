@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 06/24/19 13:36:16 by Eclipse SUMO netconvert Version 1.2.0
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netconvertConfiguration.xsd">
+
+    <input>
+        <node-files value="Highway.nod.xml"/>
+        <edge-files value="Highway.edg.xml"/>
+        <type-files value="Highway.type.xml"/>
+    </input>
+
+    <output>
+        <output-file value="Highway.net.xml"/>
+    </output>
+
+</configuration>
+-->
+
+<net version="1.1" junctionCornerDetail="5" limitTurnSpeed="5.50" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/net_file.xsd">
+
+    <location netOffset="0.00,0.00" convBoundary="0.00,0.00,2000.00,0.00" origBoundary="0.00,0.00,2000.00,0.00" projParameter="!"/>
+
+    <type id="3L45" priority="3" numLanes="3" speed="45.00"/>
+
+    <edge id="1to2" from="n1" to="n2" priority="3" type="3L45">
+        <lane id="1to2_0" index="0" speed="120.00" length="2000.00" width="3.75" shape="0.00,-9.38 2000.00,-9.38"/>
+        <lane id="1to2_1" index="1" speed="120.00" length="2000.00" width="3.75" shape="0.00,-5.63 2000.00,-5.63"/>
+        <lane id="1to2_2" index="2" speed="120.00" length="2000.00" width="3.75" shape="0.00,-1.88 2000.00,-1.88"/>
+    </edge>
+
+    <junction id="n1" type="dead_end" x="0.00" y="0.00" incLanes="" intLanes="" shape="0.00,0.00 0.00,-11.25"/>
+    <junction id="n2" type="dead_end" x="2000.00" y="0.00" incLanes="1to2_0 1to2_1 1to2_2" intLanes="" shape="2000.00,-11.25 2000.00,0.00"/>
+
+</net>
